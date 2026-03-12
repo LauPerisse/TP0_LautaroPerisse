@@ -2,7 +2,7 @@ package punto3.anemica;
 
 import java.time.LocalDateTime;
 
-public class Tempo {
+public class Tiempo {
     private LocalDateTime fechaHora;
 
     public LocalDateTime getFechaHora() {

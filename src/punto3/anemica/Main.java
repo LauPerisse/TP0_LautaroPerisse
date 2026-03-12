@@ -5,7 +5,7 @@ import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
-        Tempo tiempo = new Tempo();
+        Tiempo tiempo = new Tiempo();
         tiempo.setFechaHora(java.time.LocalDateTime.now());
 
         // La lógica de formateo está en el Main, no en el objeto Tiempo

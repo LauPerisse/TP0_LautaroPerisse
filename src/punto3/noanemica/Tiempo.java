@@ -5,19 +5,17 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class Tiempo {
-    private LocalDateTime fechaHora;
+    private final LocalDateTime fechaHora;
 
     public Tiempo(LocalDateTime fechaHora) {
         this.fechaHora = fechaHora;
     }
 
-    public String getFormatoLargo() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE d 'de' MMMM 'de' yyyy", new Locale("es", "ES"));
-        return fechaHora.format(formatter);
-    }
-
-    public String getFormatoCorto() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        return fechaHora.format(formatter);
+    public void imprimir() {
+        DateTimeFormatter largo = DateTimeFormatter.ofPattern("EEEE d 'de' MMMM 'de' yyyy", new Locale("es", "ES"));
+        DateTimeFormatter corto = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        
+        System.out.println("Formato Largo: " + fechaHora.format(largo));
+        System.out.println("Formato Corto: " + fechaHora.format(corto));
     }
 }
